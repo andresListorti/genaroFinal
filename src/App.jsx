@@ -1,4 +1,6 @@
 // import { useState } from "react";
+import Navbar from "./components/layouts/navbar/Navbar";
+import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer";
 
 // import "./App.css";
 
@@ -8,7 +10,8 @@ function App() {
   return (
     <>
       <div>
-        <h1>App</h1>
+        <Navbar />
+        <ItemListContainer />
       </div>
     </>
   );

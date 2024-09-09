@@ -1,0 +1,37 @@
+header {
+  margin-top: 0;
+  background-color: rgba(227, 220, 220, 0.9);
+  height: 90px;
+  font-size: 25px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header .logo {
+  font-size: 45px;
+}
+header .logo a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-weight: bold;
+}
+header .nav a:hover {
+  color: #c87474;
+}
+
+nav {
+  display: flex;
+  align-content: space-evenly;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 20px;
+}

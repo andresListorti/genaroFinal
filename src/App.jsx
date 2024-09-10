@@ -6,12 +6,12 @@ import ItemListContainer from "./components/pages/itemListContainer/ItemListCont
 
 function App() {
   // const [count, setCount] = useState(0);
-
+  const saludo = "Saludo personalizado para Greeting pasado por prop";
   return (
     <>
       <div>
         <Navbar />
-        <ItemListContainer />
+        <ItemListContainer greeting={saludo} />
       </div>
     </>
   );

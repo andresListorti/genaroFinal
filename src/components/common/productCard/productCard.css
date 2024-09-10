@@ -1,0 +1,30 @@
+.card-item {
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-top: 50px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.card-item,
+.card-item__link {
+  margin: 0;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-top: 50px;
+  display: flex;
+  flex-flow: column;
+  align-items: left;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.card {
+  /* display: none; */
+}

@@ -1,6 +1,7 @@
 // import { useState } from "react";
 import Navbar from "./components/layouts/navbar/Navbar";
 import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer";
+import Counter from "./components/common/counter/counter";
 
 // import "./App.css";
 
@@ -12,6 +13,7 @@ function App() {
       <div>
         <Navbar />
         <ItemListContainer greeting={saludo} />
+        <Counter />
       </div>
     </>
   );

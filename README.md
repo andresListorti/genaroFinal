@@ -1,3 +1,19 @@
+// //
+
+Buenas
+
+Esta es la primera entrega para el Proyecto Final de Andres Listorti para el Curso de REACT en CODER.
+
+GitHub:
+
+Repositorio gitHub https://github.com/andresListorti/genaroFinal
+
+Saludos!
+
+Andres Listorti
+
+// //
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

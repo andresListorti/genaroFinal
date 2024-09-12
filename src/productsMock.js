@@ -7,7 +7,7 @@ export const products = [
     description: "Descripcion",
     category: "Mujer",
     imageUrl:
-      "https://res.cloudinary.com/dnqfh2chg/image/upload/v1725317577/images_ndovqa.jpg",
+      "https://res.cloudinary.com/dgiqb0ipg/image/upload/v1726159833/iadama2_rykwou.jpg",
   },
   {
     id: "2",
@@ -17,7 +17,7 @@ export const products = [
     description: "Descripcion",
     category: "Mujer",
     imageUrl:
-      "https://res.cloudinary.com/dnqfh2chg/image/upload/v1725317577/images_ndovqa.jpg",
+      "https://res.cloudinary.com/dgiqb0ipg/image/upload/v1726159834/shoes-756616_1280_d38sin.jpg",
   },
   {
     id: "3",
@@ -27,7 +27,7 @@ export const products = [
     description: "Descripcion",
     category: "Hombre",
     imageUrl:
-      "https://res.cloudinary.com/dnqfh2chg/image/upload/v1725317577/images_ndovqa.jpg",
+      "https://res.cloudinary.com/dgiqb0ipg/image/upload/v1726159833/business-2049312_1280_j4t9es.jpg",
   },
   {
     id: "4",
@@ -37,6 +37,6 @@ export const products = [
     description: "Descripcion",
     category: "Hombre",
     imageUrl:
-      "https://res.cloudinary.com/dnqfh2chg/image/upload/v1725317577/images_ndovqa.jpg",
+      "https://res.cloudinary.com/dgiqb0ipg/image/upload/v1726159833/hombremoca_ugonuw.jpg",
   },
 ];

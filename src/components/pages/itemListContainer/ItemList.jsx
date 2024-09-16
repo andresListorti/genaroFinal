@@ -12,7 +12,7 @@ const ItemList = ({ items }) => {
         gap: "20px",
       }}
     >
-      <h1>Listado de productos</h1>
+      {/* <h1>Listado de productos</h1> */}
       {items.map((item, index) => {
         return (
           <ProductCard

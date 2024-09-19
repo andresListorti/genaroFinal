@@ -9,10 +9,10 @@ function App() {
   return (
     <>
       <div>
-        {/* <Navbar />
-        <ItemListContainer /> */}
+        <Navbar />
+        <ItemListContainer />
         {/* <Counter /> */}
-        <PruebaGrid />
+        {/* <PruebaGrid /> */}
       </div>
     </>
   );

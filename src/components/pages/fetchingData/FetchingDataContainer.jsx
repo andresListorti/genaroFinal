@@ -3,6 +3,7 @@ import FetchingData from "./FetchingData";
 
 const FetchingDataContainer = () => {
   const [users, setUsers] = useState([]);
+  const [user, setUser] = useState({});
 
   useEffect(() => {
     // const getUsers = fetch("https://jsonplaceholder.org/users").then((res) =>
@@ -12,9 +13,18 @@ const FetchingDataContainer = () => {
       res.json().then((res) => setUsers(res))
     ); // con el viejo fetch() se necesitaba poner doble ".then((res)=>res.json()).then(otros)" y ahi ya tenemos el array
   }, []);
-  //   console.log(users);
+  useEffect(() => {
+    const getUser = fetch("https://jsonplaceholder.org/users/4").then((res) =>
+      res.json().then((res) => setUser(res))
+    );
+  }, []);
 
-  return <FetchingData users={users} />;
+  // Crear Usuario
+  const createUser = (newUser) => {
+    console.log(newUser);
+  };
+
+  return <FetchingData users={users} createUser={createUser} />;
 };
 
 export default FetchingDataContainer;

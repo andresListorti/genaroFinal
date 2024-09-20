@@ -5,7 +5,7 @@ import Badge from "@mui/material/Badge";
 const CartWidget = () => {
   return (
     <>
-      <Badge badgeContent={11} color="primary">
+      <Badge badgeContent={0} max={50} color="primary" showZero={true}>
         {/* <FaCartShopping /> */}
         <ShoppingCartIcon />
       </Badge>

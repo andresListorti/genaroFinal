@@ -48,7 +48,6 @@ const FetchingDataContainer = () => {
   const childProps = {
     users,
     createUser,
-    updateUserPut,
     deleteUser,
   };
   return (

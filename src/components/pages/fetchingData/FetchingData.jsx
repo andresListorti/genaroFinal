@@ -1,7 +1,7 @@
 import React from "react";
 // La funcion que debe recibir un parametro se pone a disposicion de un callback y se ejecuta con los parentesis
 
-const FetchingData = ({ users, createUser, deleteUser, updateUser }) => {
+const FetchingData = ({ users, createUser, deleteUser }) => {
   return (
     <div>
       {users.map((user) => {

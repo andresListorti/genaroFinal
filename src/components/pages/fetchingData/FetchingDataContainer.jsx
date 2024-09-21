@@ -30,9 +30,14 @@ const FetchingDataContainer = () => {
     // const getUser = fetch("https://jsonplaceholder.org/users/3").then((res) =>
     //   res.json().then((res) => setUser(res))
     // );
-    const getUser = axios("https://jsonplaceholder.org/users/3").then((res) =>
-      setUser(res.data)
-    );
+    //
+    // con axios
+    // const getUser = axios("https://jsonplaceholder.org/users/3").then((res) =>
+    //   setUser(res.data)
+    // );
+    //
+    //con apiInstance de axios
+    const getUser = apiInstance("/users/3").then((res) => setUser(res.data));
   }, []);
 
   // Crear Usuario
@@ -41,28 +46,38 @@ const FetchingDataContainer = () => {
     //   method: "POST",
     //   body: JSON.stringify(newUser),
     // });
-    axios.post("https://jsonplaceholder.org/users", newUser);
+    //
+    // con axios
+    // axios.post("https://jsonplaceholder.org/users", newUser);
+    apiInstance.post("/users", newUser);
   };
   const updateUserPut = (newInfo, id) => {
     // fetch(`https://jsonplaceholder.org/users/${id}`, {
     //   method: "PUT",
     //   body: JSON.stringify(newInfo), // {cambia lo viejo entero por lo que le mandan a menos que pongas: {... oldUSer, x:1 y: "Pepe"}
     // });
-    axios.put(`https://jsonplaceholder.org/users/${id}`, newInfo);
+    //
+    // axios.put(`https://jsonplaceholder.org/users/${id}`, newInfo);
+    //
+    apiInstance.put(`/users/${id}`, newInfo);
   };
   const updateUserPatch = (newInfo, id) => {
     // fetch(`https://jsonplaceholder.org/users/${id}`, {
     //   method: "PATCH",
     //   body: JSON.stringify(newInfo), // {cambia solo lo que le mandan y no borra lo viejo}
     // });
-    axios.patch(`https://jsonplaceholder.org/users/${id}`, newInfo);
+    //
+    // axios.patch(`https://jsonplaceholder.org/users/${id}`, newInfo);
+    apiInstance.patch(`/users/${id}`, newInfo);
   };
 
   const deleteUser = (id) => {
     // fetch(`https://jsonplaceholder.org/users/${id}`, {
     //   method: "DELETE",
     // });
-    axios.delete(`https://jsonplaceholder.org/users/${id}`);
+    //
+    // axios.delete(`https://jsonplaceholder.org/users/${id}`);
+    apiInstance.delete(`/users/${id}`);
   };
 
   const childProps = {

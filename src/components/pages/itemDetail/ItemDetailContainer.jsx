@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
       setItem(product);
       //   console.log(product);
     }
-  }, []);
+  }, [id]);
 
   return (
     <div>

@@ -3,6 +3,7 @@ import ItemListContainer from "./components/pages/itemListContainer/ItemListCont
 import Counter from "./components/common/counter/counter";
 import PruebaGrid from "./components/common/pruebaGrid/PruebaGrid";
 import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContainer";
+import Comments from "./components/Comments";
 
 // import "./App.css";
 
@@ -14,6 +15,7 @@ function App() {
         {/* <ItemListContainer /> */}
         <ItemDetailContainer />
         {/* <Counter /> */}
+        <Comments />
         {/* <PruebaGrid /> */}
       </div>
     </>

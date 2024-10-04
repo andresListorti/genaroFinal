@@ -7,15 +7,15 @@ import { useEffect, useState } from "react";
 export const useFetch = (endpoint) => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setIsLoading(true);
     const getData = axios(endpoint);
     getData
       .then((res) => setData(res.data))
       .catch((error) => setError(error))
       .finally(() => setIsLoading(false));
   }, []);
+
   return { data, error, isLoading };
 };

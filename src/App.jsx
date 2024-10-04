@@ -4,6 +4,8 @@ import Counter from "./components/common/counter/counter";
 import PruebaGrid from "./components/common/pruebaGrid/PruebaGrid";
 import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContainer";
 import Comments from "./components/Comments";
+import Todos from "./Todos";
+import Users from "./Users";
 
 // import "./App.css";
 
@@ -13,9 +15,11 @@ function App() {
       <div>
         <Navbar />
         {/* <ItemListContainer /> */}
-        <ItemDetailContainer />
+        {/* <ItemDetailContainer /> */}
         {/* <Counter /> */}
-        <Comments />
+        {/* <Comments /> */}
+        {/* <Todos /> */}
+        <Users />
         {/* <PruebaGrid /> */}
       </div>
     </>

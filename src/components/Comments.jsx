@@ -8,7 +8,7 @@ const Comments = () => {
     error,
     isLoading,
   } = useFetch("https://jsonplaceholder.org/comments");
-  console.log(comments);
+  // console.log(comments);
 
   return <div>Comments</div>;
 };

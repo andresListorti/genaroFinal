@@ -1,14 +1,13 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useFetch } from "../utils/hooks/useFetch";
 
 const Comments = () => {
-  const [comments, setComments] = useState([]);
-
-  useEffect(() => {
-    axios("https://jsonplaceholder.org/comments")
-      .then((res) => setComments(res.data))
-      .catch((error) => console.log(error));
-  }, []);
+  const {
+    data: comments,
+    error,
+    isLoading,
+  } = useFetch("https://jsonplaceholder.org/comments");
   console.log(comments);
 
   return <div>Comments</div>;

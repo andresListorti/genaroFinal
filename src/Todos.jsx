@@ -1,17 +1,14 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useFetch } from "./utils/hooks/useFetch";
 
 const Todos = () => {
-  const [items, setItems] = useState([]);
-
-  useEffect(() => {
-    const getAllItems = axios("https://jsonplaceholder.org/posts");
-    getAllItems
-      .then((res) => setItems(res.data))
-      .catch((error) => console.log(error));
-  }, []);
-
-  console.log(items);
+  const {
+    data: posts,
+    error,
+    isLoading,
+  } = useFetch("https://jsonplaceholder.org/posts");
+  console.log(posts);
 
   return <div>Todos</div>;
 };

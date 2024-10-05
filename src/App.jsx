@@ -1,28 +1,21 @@
-import Navbar from "./components/layouts/navbar/Navbar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer";
-import Counter from "./components/common/counter/counter";
-import PruebaGrid from "./components/common/pruebaGrid/PruebaGrid";
-import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContainer";
-import Comments from "./components/Comments";
-import Todos from "./Todos";
-import Users from "./Users";
+import CartContainer from "./components/pages/cart/CartContainer";
+import Navbar from "./components/layouts/navbar/Navbar";
+import Footer from "./components/layouts/footer/Footer";
 
 // import "./App.css";
 
 function App() {
   return (
-    <>
-      <div>
-        <Navbar />
-        {/* <ItemListContainer /> */}
-        <ItemDetailContainer />
-        {/* <Counter /> */}
-        {/* <Comments /> */}
-        {/* <Todos /> */}
-        {/* <Users /> */}
-        {/* <PruebaGrid /> */}
-      </div>
-    </>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path={"/"} element={<ItemListContainer />} />
+        <Route path={"/cart"} element={<CartContainer />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 

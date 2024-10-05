@@ -11,8 +11,15 @@ const Todos = () => {
     isLoading,
   } = useFetch("https://jsonplaceholder.org/posts");
 
-  const { currentArray, totalPages, nextPage, prevPage, currentPage } =
-    usePaginate(posts, 10);
+  const [itemsPerPage, setItemsPerPage] = useState(10);
+  const {
+    currentArray,
+    totalPages,
+    nextPage,
+    prevPage,
+    currentPage,
+    setCurrentPage,
+  } = usePaginate(posts, itemsPerPage);
 
   return (
     <div>
@@ -34,6 +41,33 @@ const Todos = () => {
         disabled={currentPage === totalPages}
       >
         {">"}
+      </Button>
+      <Button
+        variant={itemsPerPage === 5 ? "contained" : "outlined"}
+        onClick={() => {
+          setItemsPerPage(5);
+          setCurrentPage(1);
+        }}
+      >
+        5
+      </Button>
+      <Button
+        variant={itemsPerPage === 10 ? "contained" : "outlined"}
+        onClick={() => {
+          setItemsPerPage(10);
+          setCurrentPage(1);
+        }}
+      >
+        10
+      </Button>
+      <Button
+        variant={itemsPerPage === 15 ? "contained" : "outlined"}
+        onClick={() => {
+          setItemsPerPage(15);
+          setCurrentPage(1);
+        }}
+      >
+        15
       </Button>
     </div>
   );

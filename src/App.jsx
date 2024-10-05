@@ -15,10 +15,10 @@ function App() {
       <div>
         <Navbar />
         {/* <ItemListContainer /> */}
-        {/* <ItemDetailContainer /> */}
+        <ItemDetailContainer />
         {/* <Counter /> */}
         {/* <Comments /> */}
-        <Todos />
+        {/* <Todos /> */}
         {/* <Users /> */}
         {/* <PruebaGrid /> */}
       </div>

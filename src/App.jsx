@@ -3,8 +3,7 @@ import ItemListContainer from "./components/pages/itemListContainer/ItemListCont
 import CartContainer from "./components/pages/cart/CartContainer";
 import Navbar from "./components/layouts/navbar/Navbar";
 import Footer from "./components/layouts/footer/Footer";
-
-// import "./App.css";
+import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContainer";
 
 function App() {
   return (
@@ -12,7 +11,14 @@ function App() {
       <Navbar />
       <Routes>
         <Route path={"/"} element={<ItemListContainer />} />
+
         <Route path={"/cart"} element={<CartContainer />} />
+        <Route path={"/login"} element={<h2>Login</h2>} />
+        <Route path={"/register"} element={<h2>registro</h2>} />
+
+        <Route path={"/productDetail/:id"} element={<ItemDetailContainer />} />
+
+        <Route path={"*"} element={<h2>404 Not Found</h2>} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -7,15 +7,17 @@ header {
   justify-content: space-around;
   align-items: center;
 }
-header .logo {
+
+/* header .logo {
   font-size: 45px;
-}
-header .logo a {
-  text-decoration: none;
+} */
+
+/* header .logo h1 {
   text-transform: uppercase;
   color: black;
   font-weight: bold;
-}
+  text-decoration: none;
+} */
 header .nav a:hover {
   color: #c87474;
 }

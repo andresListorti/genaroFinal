@@ -2,7 +2,7 @@ const Logo = () => {
   return (
     <>
       <div className="logo">
-        <a href="#">Genaro</a>
+        <h1>Genaro</h1>
       </div>
     </>
   );

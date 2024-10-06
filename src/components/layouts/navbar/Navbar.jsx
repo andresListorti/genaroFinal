@@ -1,6 +1,8 @@
 import CartWidget from "../../common/cardWidget/CartWidget";
 import Logo from "../../common/logo/Logo";
 import "./navbar.css";
+import { Link } from "react-router-dom";
+import "../../common/logo/logo.css";
 
 const Navbar = () => {
   return (
@@ -9,7 +11,9 @@ const Navbar = () => {
       {/* Listado de categorias clickeables */}
       {/* cart + widget A la derecha */}
       <header>
-        <Logo />
+        <Link to={"/"} className="log">
+          <Logo />
+        </Link>
         <nav className="nav">
           <ul>
             <li>
@@ -21,12 +25,14 @@ const Navbar = () => {
             <li>
               <a href="./pages/contacto.html">Contacto</a>
             </li>
-            <li className="cart">
+            {/* <li className="cart">
               <a href="./pages/carro.html">
                 <i className="fa-solid fa-cart-shopping"></i>
               </a>
-            </li>
-            <CartWidget />
+            </li> */}
+            <Link to={"/cart"}>
+              <CartWidget />
+            </Link>
           </ul>
         </nav>
         {/* <nav className="nav__burger">

@@ -16,8 +16,20 @@ const Navbar = () => {
         </Link>
         <nav className="nav">
           <ul>
+            {/* <li>
+              <Link to={"/category"}>
+                <h4>Colecciones</h4>
+              </Link>
+            </li> */}
             <li>
-              <a href="#colecciones">Colecciones</a>
+              <Link to={"/category/hombre"}>
+                <h4>Hombre</h4>
+              </Link>
+            </li>
+            <li>
+              <Link to={"/category/mujer"}>
+                <h4>Mujer</h4>
+              </Link>
             </li>
             <li>
               <a href="./pages/acceso.html">Acceso</a>

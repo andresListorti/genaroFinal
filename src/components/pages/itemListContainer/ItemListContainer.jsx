@@ -11,7 +11,7 @@ import { useParams } from "react-router-dom";
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
   const { categoryName } = useParams(); // siempre va a ser un objeto {} o {categoryName} o undefined si hay categoria que no existe
-  console.log(categoryName);
+  // console.log(categoryName);
 
   useEffect(() => {
     const filteredProducts = products.filter(

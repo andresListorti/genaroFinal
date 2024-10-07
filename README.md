@@ -8,6 +8,8 @@ Se configura en App.js el routing usando un BrowserRouter con react-router-dom y
 
 Se desarrolla la navegabilidad básica de la aplicación, demostrando que la app permite ver el Home desde el LOGO, a las colecciones de Hombre y Mujer separadas por su category, al cart y navegar a un detalle de item, con su boton de "ver detalle".
 
+Se crea video corto "gif" y se agrega a la carpeta src.
+
 Repositorio gitHub https://github.com/andresListorti/genaroFinal
 
 Saludos!

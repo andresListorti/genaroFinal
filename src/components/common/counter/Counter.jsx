@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 
 const Counter = () => {
   const [contador, setContador] = useState(1);
+
+  const navigate = useNavigate();
+  // console.log(navigate);
 
   const handleSumar = () => {
     setContador(contador + 1);
@@ -34,7 +38,15 @@ const Counter = () => {
           Restar
         </Button>
       </div>
-      <Button variant="outlined">Agregar al Carrito</Button>
+      <Button
+        variant="outlined"
+        onClick={() => {
+          console.log("Se agrego al carrito");
+          navigate("/cart");
+        }}
+      >
+        Agregar al Carrito
+      </Button>
     </>
   );
 };

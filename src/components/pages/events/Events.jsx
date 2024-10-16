@@ -10,7 +10,8 @@ const Events = () => {
   };
 
   const handleInput = (evento) => {
-    console.log(evento);
+    // console.log(evento);
+    console.log(evento.target.value);
   };
 
   return (

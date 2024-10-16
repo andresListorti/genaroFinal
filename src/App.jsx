@@ -5,6 +5,7 @@ import Navbar from "./components/layouts/navbar/Navbar";
 import Footer from "./components/layouts/footer/Footer";
 import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContainer";
 import CollectionContainer from "./components/pages/collections/CollectionContainer";
+import Events from "./components/pages/events/Events";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
         <Route path={"/register"} element={<h2>registro</h2>} />
 
         <Route path={"/productDetail/:id"} element={<ItemDetailContainer />} />
+
+        <Route path={"/eventos"} element={<Events />} />
 
         <Route path={"*"} element={<h2>404 Not Found</h2>} />
       </Routes>

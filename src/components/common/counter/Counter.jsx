@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 
-const Counter = () => {
+const Counter = ({ onAdd }) => {
   const [contador, setContador] = useState(1);
 
   const navigate = useNavigate();
@@ -41,7 +41,8 @@ const Counter = () => {
       <Button
         variant="outlined"
         onClick={() => {
-          console.log("Se agrego al carrito");
+          // console.log("Se agrego al carrito");
+          onAdd(contador);
           navigate("/cart");
         }}
       >

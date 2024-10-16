@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 const ItemDetailContainer = () => {
   const [item, setItem] = useState({});
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
 
   useEffect(() => {
     let product = products.find((product) => product.id === id);
@@ -16,9 +16,17 @@ const ItemDetailContainer = () => {
     }
   }, [id]);
 
+  // agregar al Cart
+  const onAdd = (contador) => {
+    console.log(contador);
+
+    console.log(item);
+    console.log("Se agrego onAdd");
+  };
+
   return (
     <div>
-      <ItemDetail item={item} />
+      <ItemDetail item={item} onAdd={onAdd} />
     </div>
   );
 };

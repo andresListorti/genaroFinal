@@ -2,7 +2,7 @@ import React from "react";
 import ProductCard from "../../common/productCard/ProductCard";
 import Counter from "../../common/counter/counter";
 
-const ItemDetail = ({ item }) => {
+const ItemDetail = ({ item, onAdd }) => {
   //   console.log(item);
 
   return (
@@ -18,7 +18,7 @@ const ItemDetail = ({ item }) => {
       }}
     >
       <ProductCard key={item.id} {...item} />
-      <Counter />
+      <Counter onAdd={onAdd} />
     </div>
   );
 };

@@ -2,21 +2,28 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 
-const Counter = ({ onAdd }) => {
+const Counter = ({ onAdd, stock }) => {
   const [contador, setContador] = useState(1);
+  const [deshabilitado, setDeshabilitado] = useState(false);
 
   const navigate = useNavigate();
   // console.log(navigate);
 
   const handleSumar = () => {
-    setContador(contador + 1);
+    if (contador < stock) {
+      setContador(contador + 1);
+    }
   };
+
   const handleRestar = () => {
-    setContador(contador - 1);
+    if (contador > 1) {
+      setContador(contador - 1);
+    }
   };
-  const handleReset = () => {
-    setContador(0);
-  };
+
+  // const handleReset = () => {
+  //   setContador(1);
+  // };
 
   return (
     <>
@@ -31,17 +38,25 @@ const Counter = ({ onAdd }) => {
           flexWrap: "wrap",
         }}
       >
-        <Button onClick={handleSumar} variant="contained">
+        <Button
+          onClick={handleSumar}
+          variant="contained"
+          // disabled={contador === stock ? !deshabilitado : deshabilitado}
+        >
           Sumar
         </Button>
-        <Button onClick={handleRestar} variant="contained">
+        <Button
+          onClick={handleRestar}
+          variant="contained"
+          disabled={contador === 1 ? !deshabilitado : deshabilitado}
+        >
           Restar
         </Button>
       </div>
       <Button
         variant="outlined"
         onClick={() => {
-          // console.log("Se agrego al carrito");
+          console.log("Se agrego al carrito");
           onAdd(contador);
           navigate("/cart");
         }}

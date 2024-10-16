@@ -13,7 +13,7 @@ export const products = [
     id: "2",
     title: "A-222",
     price: 25.0,
-    stock: 12,
+    stock: 10,
     description: "Mock Descripcion",
     category: "mujer",
     imageUrl:
@@ -23,7 +23,7 @@ export const products = [
     id: "3",
     title: "T-1000",
     price: 29.0,
-    stock: 12,
+    stock: 15,
     description: "Mock Descripcion",
     category: "hombre",
     imageUrl:
@@ -33,7 +33,7 @@ export const products = [
     id: "4",
     title: "L-33",
     price: 18.0,
-    stock: 12,
+    stock: 11,
     description: "Mock Descripcion",
     category: "hombre",
     imageUrl:

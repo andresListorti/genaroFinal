@@ -18,7 +18,7 @@ const ItemDetail = ({ item, onAdd }) => {
       }}
     >
       <ProductCard key={item.id} {...item} />
-      <Counter onAdd={onAdd} />
+      <Counter onAdd={onAdd} stock={item.stock} />
     </div>
   );
 };

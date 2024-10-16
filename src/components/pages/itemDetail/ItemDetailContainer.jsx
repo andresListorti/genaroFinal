@@ -17,11 +17,12 @@ const ItemDetailContainer = () => {
   }, [id]);
 
   // agregar al Cart
-  const onAdd = (contador) => {
-    console.log(contador);
-
-    console.log(item);
-    console.log("Se agrego onAdd");
+  const onAdd = (quantity) => {
+    // console.log(quantity);
+    // console.log(item);
+    // console.log("Se agrego onAdd");
+    let productoAlCarrito = { ...item, quantity };
+    console.log(productoAlCarrito);
   };
 
   return (

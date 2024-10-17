@@ -37,7 +37,7 @@ const Navbar = () => {
             <li>
               <a href="./pages/contacto.html">Contacto</a>
             </li>
-            <Link to={"/eventos"}>Events</Link>
+            {/* <Link to={"/eventos"}>Events</Link> */}
             {/* <li className="cart">
               <a href="./pages/carro.html">
                 <i className="fa-solid fa-cart-shopping"></i>

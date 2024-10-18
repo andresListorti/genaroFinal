@@ -5,12 +5,16 @@ import { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
 
 const CartWidget = () => {
-  const { cart, sumar } = useContext(CartContext); // envia el objeto del value de contexto
-  console.log(cart);
+  const { cart, addToCart } = useContext(CartContext); // envia el objeto del value de contexto
 
   return (
     <>
-      <Badge badgeContent={0} max={50} color="primary" showZero={true}>
+      <Badge
+        badgeContent={cart.length}
+        max={50}
+        color="primary"
+        showZero={true}
+      >
         {/* <FaCartShopping /> */}
         <ShoppingCartIcon />
       </Badge>

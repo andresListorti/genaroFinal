@@ -56,7 +56,7 @@ const Counter = ({ onAdd, stock }) => {
       <Button
         variant="outlined"
         onClick={() => {
-          console.log("Se agrego al carrito");
+          //console.log("Se agrego al carrito");
           onAdd(contador);
           navigate("/cart");
         }}

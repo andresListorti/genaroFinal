@@ -49,9 +49,15 @@ const Cart = ({ cart, clearCart, deleteProductById, total }) => {
       <Button variant="contained" onClick={clearCart}>
         Limpiar Carrito
       </Button>
-      <Typography gutterBottom variant="h4" component="div">
-        {"Total a Pagar: $ " + total}
-      </Typography>
+      {total > 0 ? (
+        <Typography gutterBottom variant="h4" component="div">
+          {"Total a Pagar: $ " + total}
+        </Typography>
+      ) : (
+        <Typography gutterBottom variant="h4" component="div">
+          {"No tienes elementos En el carrito"}
+        </Typography>
+      )}
     </div>
   );
 };

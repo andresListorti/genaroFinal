@@ -46,9 +46,13 @@ const Cart = ({ cart, clearCart, deleteProductById, total }) => {
           </div>
         );
       })}
-      <Button variant="contained" onClick={clearCart}>
-        Limpiar Carrito
-      </Button>
+
+      {total > 0 && (
+        <Button variant="contained" onClick={clearCart}>
+          Limpiar Carrito
+        </Button>
+      )}
+
       {total > 0 ? (
         <Typography gutterBottom variant="h4" component="div">
           {"Total a Pagar: $ " + total}

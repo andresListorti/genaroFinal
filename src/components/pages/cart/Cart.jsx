@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 
-const Cart = ({ cart, clearCart }) => {
+const Cart = ({ cart, clearCart, deleteProductById, total }) => {
   return (
     <div>
       <h2>Cart</h2>
@@ -35,7 +35,12 @@ const Cart = ({ cart, clearCart }) => {
               <Typography gutterBottom variant="h7" component="div">
                 {"Subtotal: $ " + product.price * product.quantity}
               </Typography>
-              <Button size="small">Eliminar</Button>
+              <Button
+                size="small"
+                onClick={() => deleteProductById(product.id)}
+              >
+                Eliminar
+              </Button>
             </Card>
             <h5>***********************************************</h5>
           </div>
@@ -44,6 +49,9 @@ const Cart = ({ cart, clearCart }) => {
       <Button variant="contained" onClick={clearCart}>
         Limpiar Carrito
       </Button>
+      <Typography gutterBottom variant="h4" component="div">
+        {"Total a Pagar: $ " + total}
+      </Typography>
     </div>
   );
 };

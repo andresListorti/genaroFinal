@@ -14,6 +14,23 @@ export const CartContextProvider = ({ children }) => {
     setCart([]);
   };
 
-  let data = { cart, addToCart, clearCart };
+  //Eliminar un producto
+  const deleteProductById = (id) => {
+    let filtred = cart.filter((product) => product.id !== id);
+    setCart(filtred);
+  };
+
+  // Calcular total
+  const getTotalAmount = () => {
+    let totalAmount = cart.reduce((acumulador, product) => {
+      return acumulador + product.price * product.quantity;
+    }, 0);
+    return totalAmount;
+  };
+
+  // total items -todos los productos- al widget
+  const getTotalItems = () => {};
+
+  let data = { cart, addToCart, clearCart, deleteProductById, getTotalAmount };
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };

@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 
-const Counter = ({ onAdd, stock }) => {
-  const [contador, setContador] = useState(1);
+const Counter = ({ onAdd, stock, totalItems }) => {
+  const [contador, setContador] = useState(totalItems);
   const [deshabilitado, setDeshabilitado] = useState(false);
 
   const navigate = useNavigate();
@@ -12,12 +12,16 @@ const Counter = ({ onAdd, stock }) => {
   const handleSumar = () => {
     if (contador < stock) {
       setContador(contador + 1);
+    } else {
+      alert("Stock Maximo");
     }
   };
 
   const handleRestar = () => {
     if (contador > 1) {
       setContador(contador - 1);
+    } else {
+      alert("No puedes agregar menos de 1");
     }
   };
 

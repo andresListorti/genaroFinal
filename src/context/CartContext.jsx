@@ -6,10 +6,23 @@ export const CartContext = createContext();
 
 export const CartContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  // console.log(cart);
+
   const addToCart = (product) => {
-    setCart([...cart, product]);
+    let existe = cart.some((elemento) => elemento.id === product.id);
+    if (existe) {
+      let nuevoArray = cart.map((elemento) => {
+        if (elemento.id === product.id) {
+          return { ...elemento, quantity: product.quantity };
+        } else {
+          return elemento;
+        }
+      });
+      setCart(nuevoArray);
+    } else {
+      setCart([...cart, product]);
+    }
   };
+
   const clearCart = () => {
     setCart([]);
   };
@@ -36,6 +49,11 @@ export const CartContextProvider = ({ children }) => {
     return totalItems;
   };
 
+  const getTotalQuantityById = (id) => {
+    let product = cart.find((element) => element.id === id);
+    return product ? product.quantity : 1;
+  };
+
   let data = {
     cart,
     addToCart,
@@ -43,6 +61,7 @@ export const CartContextProvider = ({ children }) => {
     deleteProductById,
     getTotalAmount,
     getTotalItems,
+    getTotalQuantityById,
   };
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };

@@ -8,28 +8,26 @@ import { CartContext } from "./../../../context/CartContext";
 const ItemDetailContainer = () => {
   const [item, setItem] = useState({});
   const { id } = useParams();
-  const { addToCart } = useContext(CartContext);
-  // console.log(id);
+  const { addToCart, getTotalQuantityById } = useContext(CartContext);
+
+  let totalItems = getTotalQuantityById(id);
 
   useEffect(() => {
     let product = products.find((product) => product.id === id);
     if (product) {
       setItem(product);
-      // console.log(product);
     }
   }, [id]);
 
   // agregar al Cart
   const onAdd = (quantity) => {
-    // console.log(quantity);
-    // console.log(item);
     let productoAlCarrito = { ...item, quantity };
     addToCart(productoAlCarrito);
   };
 
   return (
     <div>
-      <ItemDetail item={item} onAdd={onAdd} />
+      <ItemDetail item={item} onAdd={onAdd} totalItems={totalItems} />
     </div>
   );
 };

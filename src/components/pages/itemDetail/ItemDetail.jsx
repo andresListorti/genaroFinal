@@ -2,7 +2,7 @@ import React from "react";
 import ProductCard from "../../common/productCard/ProductCard";
 import Counter from "../../common/counter/counter";
 
-const ItemDetail = ({ item, onAdd }) => {
+const ItemDetail = ({ item, onAdd, totalItems }) => {
   //   console.log(item);
 
   return (
@@ -17,8 +17,9 @@ const ItemDetail = ({ item, onAdd }) => {
         flexWrap: "wrap",
       }}
     >
+      <h2>Ya tienes {totalItems} unidades en el carrito</h2>
       <ProductCard key={item.id} {...item} />
-      <Counter onAdd={onAdd} stock={item.stock} />
+      <Counter onAdd={onAdd} stock={item.stock} totalItems={totalItems} />
     </div>
   );
 };

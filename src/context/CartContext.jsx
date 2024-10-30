@@ -10,7 +10,10 @@ export const CartContextProvider = ({ children }) => {
   const addToCart = (product) => {
     setCart([...cart, product]);
   };
+  const clearCart = () => {
+    setCart([]);
+  };
 
-  let data = { cart, addToCart };
+  let data = { cart, addToCart, clearCart };
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };

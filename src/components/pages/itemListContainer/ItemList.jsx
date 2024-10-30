@@ -1,8 +1,6 @@
 import ProductCard from "../../common/productCard/ProductCard";
 
 const ItemList = ({ items }) => {
-  //   console.log(items[0].title);
-
   return (
     <div
       style={{
@@ -27,19 +25,6 @@ const ItemList = ({ items }) => {
           />
         );
       })}
-
-      {/* <ProductCard
-        key={items[1].id}
-        titulo={items[1].title}
-        precio={items[1].price}
-        foto={items[1].imageUrl}
-      />
-      <ProductCard
-        key={items[2].id}
-        titulo={items[2].title}
-        precio={items[2].price}
-        foto={items[2].imageUrl}
-      /> */}
     </div>
   );
 };

@@ -29,8 +29,20 @@ export const CartContextProvider = ({ children }) => {
   };
 
   // total items -todos los productos- al widget
-  const getTotalItems = () => {};
+  const getTotalItems = () => {
+    let totalItems = cart.reduce((acumulador, product) => {
+      return acumulador + product.quantity;
+    }, 0);
+    return totalItems;
+  };
 
-  let data = { cart, addToCart, clearCart, deleteProductById, getTotalAmount };
+  let data = {
+    cart,
+    addToCart,
+    clearCart,
+    deleteProductById,
+    getTotalAmount,
+    getTotalItems,
+  };
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };

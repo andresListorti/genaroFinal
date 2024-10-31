@@ -16,9 +16,11 @@ const ItemListContainer = () => {
   //console.log(categoryName);
 
   useEffect(() => {
-    let productosCollection = collection(db, "producto");
-    let getProductos = getDocs(productosCollection);
-    getProductos.then((res) => console.log(res.docs[0].data()));
+    const itemsCollection = collection(db, "producto");
+    getDocs(itemsCollection).then((snapshot) => {
+      setItems(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+    });
+    console.log(items);
   }, [categoryName]);
 
   return <ItemList items={items} />;

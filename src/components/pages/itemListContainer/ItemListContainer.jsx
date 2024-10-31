@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 // import { products } from "./../../../productsMock";
-import { collection, getDocs, query, where } from "firebase/firestore";
+import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../../../config-firebase";
 
 const ItemListContainer = () => {
@@ -27,7 +27,18 @@ const ItemListContainer = () => {
     console.log(items);
   }, [categoryName]);
 
-  return <ItemList items={items} />;
+  const agregarProductos = () => {
+    products.forEach((producto) => {
+      addDoc(collection(db, "producto"), producto);
+    });
+  };
+
+  return (
+    <>
+      <ItemList items={items} />
+      {/* <button onClick={agregarProductos}>Agregar</button> */}
+    </>
+  );
 };
 
 export default ItemListContainer;

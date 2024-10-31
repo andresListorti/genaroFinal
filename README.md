@@ -21,6 +21,8 @@ Checkout completo con stock actualizado en firebase, numero de orden y carrito l
 
 Se crea video corto "gif" y se agrega a la carpeta src.
 
+Variables de entorno enviadas por separado en .docx
+
 Repositorio gitHub https://github.com/andresListorti/genaroFinal
 
 Deployado en: https://genaro-final-q6gh8k5xr-andres-projects-cd4bd72c.vercel.app/

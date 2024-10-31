@@ -25,7 +25,7 @@ Variables de entorno enviadas por separado en .docx
 
 Repositorio gitHub https://github.com/andresListorti/genaroFinal
 
-Deployado en: https://genaro-final-q6gh8k5xr-andres-projects-cd4bd72c.vercel.app/
+Deployado en: https://genaro-final.vercel.app/
 
 Saludos!
 

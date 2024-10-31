@@ -18,7 +18,7 @@ const ItemListContainer = () => {
   useEffect(() => {
     let productosCollection = collection(db, "producto");
     let getProductos = getDocs(productosCollection);
-    getProductos.then((res) => console.log(res));
+    getProductos.then((res) => console.log(res.docs[0].data()));
   }, [categoryName]);
 
   return <ItemList items={items} />;

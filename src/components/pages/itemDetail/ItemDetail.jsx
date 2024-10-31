@@ -1,6 +1,6 @@
 import React from "react";
 import ProductCard from "../../common/productCard/ProductCard";
-import Counter from "../../common/counter/counter";
+import Counter from "../../common/counter/Counter";
 
 const ItemDetail = ({ item, onAdd, totalItems }) => {
   //   console.log(item);

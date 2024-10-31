@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 // import { products } from "./../../../productsMock";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../../../config-firebase";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -14,30 +16,9 @@ const ItemListContainer = () => {
   //console.log(categoryName);
 
   useEffect(() => {
-    const filteredProducts = products.filter(
-      (product) => product.category === categoryName
-    );
-    //fetch
-    // declaro la promesa
-    const getProducts = new Promise((res, rej) => {
-      let isLogued = true;
-      if (isLogued) {
-        res(categoryName ? filteredProducts : products);
-        // res(products);
-      } else {
-        rej({ message: "Error mio" });
-      }
-    });
-
-    // manejo la promesa
-    getProducts
-      .then((response) => {
-        setItems(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-    // .finally(console.log("Finally"));
+    let productosCollection = collection(db, "producto");
+    let getProductos = getDocs(productosCollection);
+    getProductos.then((res) => console.log(res));
   }, [categoryName]);
 
   return <ItemList items={items} />;

@@ -17,6 +17,8 @@ Se aplica el contexto de carrito comn variables globales
 Firebase es instalado y configurado. Se cargan los productos en la BBDD online.
 Se aplican sus funcionalidades en ItemDetailContainer y en ItemListContainer
 
+Checkout completo con stock actualizado en firebase, numero de orden y carrito limpio
+
 Se crea video corto "gif" y se agrega a la carpeta src.
 
 Repositorio gitHub https://github.com/andresListorti/genaroFinal

@@ -7,6 +7,7 @@ import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContain
 import CollectionContainer from "./components/pages/collections/CollectionContainer";
 import Events from "./components/pages/events/Events";
 import { CartContextProvider } from "./context/CartContext";
+import Checkout from "./components/pages/checkout/Checkout";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           {/* <Route path={"/category"} element={<CollectionContainer />} /> */}
 
           <Route path={"/cart"} element={<CartContainer />} />
+
           <Route path={"/login"} element={<h2>Login</h2>} />
           <Route path={"/register"} element={<h2>registro</h2>} />
 
@@ -29,6 +31,8 @@ function App() {
             path={"/productDetail/:id"}
             element={<ItemDetailContainer />}
           />
+
+          <Route path={"/checkout"} element={<Checkout />} />
 
           <Route path={"/eventos"} element={<Events />} />
 

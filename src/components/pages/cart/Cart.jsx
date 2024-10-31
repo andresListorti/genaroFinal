@@ -8,6 +8,7 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Cart = ({ cart, clearCart, deleteProductById, total }) => {
   return (
@@ -48,9 +49,14 @@ const Cart = ({ cart, clearCart, deleteProductById, total }) => {
       })}
 
       {total > 0 && (
-        <Button variant="contained" onClick={clearCart}>
-          Limpiar Carrito
-        </Button>
+        <>
+          <Button variant="contained" onClick={clearCart}>
+            Limpiar Carrito
+          </Button>
+          <Link to="/checkout">
+            <Button variant="contained">Finalizar Compra</Button>
+          </Link>
+        </>
       )}
 
       {total > 0 ? (

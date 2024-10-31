@@ -17,7 +17,7 @@ const ItemDetail = ({ item, onAdd, totalItems }) => {
         flexWrap: "wrap",
       }}
     >
-      <h2>Ya tienes {totalItems} unidades en el carrito</h2>
+      {/* <h2>Ya tienes {totalItems} unidades en el carrito</h2> */}
       <ProductCard key={item.id} {...item} />
       <Counter onAdd={onAdd} stock={item.stock} totalItems={totalItems} />
     </div>

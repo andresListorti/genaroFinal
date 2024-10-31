@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 // import { products } from "./../../../productsMock";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../../../config-firebase";
 
 const ItemListContainer = () => {
@@ -17,7 +17,11 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     const itemsCollection = collection(db, "producto");
-    getDocs(itemsCollection).then((snapshot) => {
+    let consulta = itemsCollection;
+    if (categoryName) {
+      consulta = query(itemsCollection, where("category", "==", categoryName));
+    }
+    getDocs(consulta).then((snapshot) => {
       setItems(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
     });
     console.log(items);

@@ -23,6 +23,8 @@ Se crea video corto "gif" y se agrega a la carpeta src.
 
 Repositorio gitHub https://github.com/andresListorti/genaroFinal
 
+Deployado en: https://genaro-final-q6gh8k5xr-andres-projects-cd4bd72c.vercel.app/
+
 Saludos!
 
 Andres Listorti

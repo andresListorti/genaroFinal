@@ -12,6 +12,10 @@ El Cart recibe las cantidades correctamente y tiene completa funcionalidad
 
 Se realizan renderizados de distintos tipos en el Cart.
 
+Se aplica el contexto de carrito comn variables globales
+
+Firebase es instalado y configurado.
+
 Se crea video corto "gif" y se agrega a la carpeta src.
 
 Repositorio gitHub https://github.com/andresListorti/genaroFinal
